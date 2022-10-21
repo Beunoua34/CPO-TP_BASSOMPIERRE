@@ -27,9 +27,13 @@ public class TP2_Bieres_BASSOMPIERRE {
         BouteilleBiere biere3 = new BouteilleBiere ("FAXE" , 12.0 , "Colline du crack");
         biere3.lireEtiquette();
         BouteilleBiere biere4 = new BouteilleBiere ("MAXIMATOR", 11.5,"MTP");
+        BouteilleBiere biere5 = new BouteilleBiere ("Biere du demon", 12.5,"Gare st Roch");
         
         System.out.println(uneBiere.Decapsuler());
-        
+        System.out.println(uneBiere);
+        System.out.println(biere4.Decapsuler());
+        System.out.println(biere4);
+        System.out.println(biere3);
     }
     
 }
