@@ -24,6 +24,11 @@ public class TP2_relation_1_BASSOMPIERRE {
         System.out.println("liste des voitures disponibles "+ uneClio + "\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
         //on teste, et ca fonctionne!
         
+        //8:
+        bob.liste_voitures[0] = uneClio ;
+        bob.nbVoitures = 1 ;
+        uneClio.Proprietaire = bob ;
+        System.out.println("La premiere voiture de Bob est "+ bob.liste_voitures[0]); //on affiche la premiere voiture de Bob
     }
     
 }

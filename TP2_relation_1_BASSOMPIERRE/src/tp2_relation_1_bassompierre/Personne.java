@@ -11,9 +11,13 @@ package tp2_relation_1_bassompierre;
 public class Personne {
     String nom;
     String prenom;
+    int nbVoitures;
+    Voiture [] liste_voitures ; //creation dun tableau contenant chaque voiture de la personne
     public Personne (String unNom, String unPrenom){
         nom=unNom;
         prenom=unPrenom;
+        nbVoitures=0;
+        liste_voitures= new Voiture[3];
     }
 
 @Override
