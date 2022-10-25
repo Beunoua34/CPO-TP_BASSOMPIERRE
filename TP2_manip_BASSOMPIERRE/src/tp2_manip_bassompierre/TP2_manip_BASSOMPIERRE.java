@@ -4,6 +4,8 @@
  */
 package tp2_manip_bassompierre;
 
+import java.util.Arrays;
+
 /**
  *
  * @author benba
@@ -33,10 +35,13 @@ public class TP2_manip_BASSOMPIERRE {
         // La ligne "Moussaka assiette667 = new Tartiflette() ;" est incorrecte
         //Une référence objetne peut pas referencer un autre type d'objet qui n'a aucun rapport
         
-        //7-
-
-
-        
+        //7:
+        Moussaka Tab [] = new Moussaka[10];  // creation du tableau
+        for (int i=0;i<10;i++){ //pour chaque case du tableau, on cree une moussaka
+            Tab[i]= new Moussaka(i); //je fais le choix de mettre un nombre de callorie égal au numero de case de la moussaka
+        }
+        System.out.println(Tab[1].nbCalories);
+        System.out.println(Tab[4].nbCalories); // j'affiche 2 cases du tableau pour vérifier: ca fonctionne
     }
-    
+
 }
