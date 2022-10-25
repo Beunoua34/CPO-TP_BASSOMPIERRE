@@ -29,6 +29,25 @@ public class TP2_relation_1_BASSOMPIERRE {
         bob.nbVoitures = 1 ;
         uneClio.Proprietaire = bob ;
         System.out.println("La premiere voiture de Bob est "+ bob.liste_voitures[0]); //on affiche la premiere voiture de Bob
+    
+        //9:
+        uneMicra.Proprietaire= reno; //on donne la Micra a reno
+        reno.nbVoitures=1;
+        reno.liste_voitures[0]=uneMicra;
+        
+        // On n'ajoute pas encore la 2008 a Bob pour lui ajouter plus tard avec la methode ajouter_voiture()
+        //une2008.Proprietaire=bob;
+       // bob.nbVoitures+=1;
+        //bob.liste_voitures[bob.nbVoitures]=une2008; //si on a deja 1 voiture, la nouvelle est ajoutee dans la case n1 de la liste
+        
+        // et l'autre clio a reno
+        uneAutreClio.Proprietaire= reno;
+        reno.nbVoitures+=1;
+        reno.liste_voitures[reno.nbVoitures-1]= uneAutreClio;
+        
+        //10:
+        System.out.println(bob.ajouter_voiture(une2008)); //on ajoute la 200_ a Bob et ca fonctionne
+        System.out.println(bob.ajouter_voiture(uneAutreClio)); //l'autre clio appartient a reno, donc l'ajout ne fonctionne pas
     }
     
 }

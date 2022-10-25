@@ -19,7 +19,23 @@ public class Personne {
         nbVoitures=0;
         liste_voitures= new Voiture[3];
     }
-
+    public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
+        if (voiture_a_ajouter.Proprietaire!=null){
+            System.out.println("Erreur, la voiture est volee");
+            return false;            
+        }
+        else if (nbVoitures>=3){
+            System.out.println("Erreur, la personne a deja 3 voitures");
+            return false;
+        }
+        else {
+            int caseTableau=nbVoitures; //on determine la case a ajouter
+            nbVoitures+=1;
+            voiture_a_ajouter.Proprietaire=this; //on affecte la personne qui est en train d'executer la methode en proprietaire de la voiture
+            return true; 
+            
+        }
+    }
 @Override
 public String toString() {
 String chaine_a_retourner;
