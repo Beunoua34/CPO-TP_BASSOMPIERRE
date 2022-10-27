@@ -32,6 +32,7 @@ public class Personne {
             int caseTableau=nbVoitures; //on determine la case a ajouter
             nbVoitures+=1;
             voiture_a_ajouter.Proprietaire=this; //on affecte la personne qui est en train d'executer la methode en proprietaire de la voiture
+            this.liste_voitures[caseTableau]=voiture_a_ajouter; //et on ajoute cette voiture à la liste du propriétaire
             return true; 
             
         }

@@ -48,6 +48,7 @@ public class TP2_relation_1_BASSOMPIERRE {
         //10:
         System.out.println(bob.ajouter_voiture(une2008)); //on ajoute la 200_ a Bob et ca fonctionne
         System.out.println(bob.ajouter_voiture(uneAutreClio)); //l'autre clio appartient a reno, donc l'ajout ne fonctionne pas
+
     }
     
 }
