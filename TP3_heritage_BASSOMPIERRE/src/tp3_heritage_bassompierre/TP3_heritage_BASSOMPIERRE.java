@@ -4,6 +4,12 @@
  */
 package tp3_heritage_bassompierre;
 
+import Armes.Epee;
+import Armes.Baton;
+
+import java.util.ArrayList;
+import Armes.*;
+
 /**
  *
  * @author benba
@@ -20,6 +26,15 @@ public class TP3_heritage_BASSOMPIERRE {
         Baton MonBaton = new Baton ("Chene",4,5);
         Baton MonAutreBaton = new Baton("Charme",5,6);
         System.out.println(MonBaton); //on en affiche 1 pour tester
+        
+        ArrayList <Arme> TabArme= new ArrayList <Arme>();  //on cree un tableau dynamique d'armes
+        TabArme.add(MonEpee);
+        TabArme.add(MonAutreEpee);
+        TabArme.add(MonBaton);
+        TabArme.add(MonAutreBaton);
+        for (int i=0; i<TabArme.size();i++){  //on parcourt tout le tableau pour afficher chaque element
+            System.out.println(TabArme.get(i));
+        }
     }
     
 }
