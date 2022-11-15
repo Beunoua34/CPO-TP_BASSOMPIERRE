@@ -39,7 +39,16 @@ public class Magicien extends Personnage{
     }
 
     public void setVie(int vie) {
-        this.vie = vie;
+        if (vie<0){       
+            this.vie = 0; //si la vie est <0, on la fixe a 0
+        }else {
+            this.vie = vie;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Magicien{ Nom= " + nom + ", Points de vie=" + vie+ ", Confirme= " + confirme + '}';
     }
     
 }

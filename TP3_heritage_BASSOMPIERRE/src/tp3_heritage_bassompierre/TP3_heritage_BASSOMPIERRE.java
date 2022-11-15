@@ -42,7 +42,9 @@ public class TP3_heritage_BASSOMPIERRE {
         //on cree 2 magiciens et 2 guerriers
         Magicien premierMagicien=new Magicien("Gandalf",65,true);
         Magicien deuxiemeMagicien= new Magicien("Garcimore",44,false);
-        
+        deuxiemeMagicien.setVie(-44);
+        System.out.println(deuxiemeMagicien); //on teste de mettre la vie du magicien en negatif, et on voit qu'elle est mise a 0 automatiquement
+        deuxiemeMagicien.setVie(44); //puis on remet au magicien sa vie initiale
         Guerrier premierGuerrier= new Guerrier ("Conan",78,false);
         Guerrier deuxiemeGuerrier= new Guerrier ("Lannister",45, true);
         
@@ -51,6 +53,9 @@ public class TP3_heritage_BASSOMPIERRE {
         TabPerso.add(deuxiemeMagicien);
         TabPerso.add(premierGuerrier);
         TabPerso.add(deuxiemeGuerrier); //et on ajoute chaque guerrier dedans
+        for (int i=0;i<TabPerso.size();i++){
+            System.out.println(TabPerso.get(i));
+        }
     }
     
 }
