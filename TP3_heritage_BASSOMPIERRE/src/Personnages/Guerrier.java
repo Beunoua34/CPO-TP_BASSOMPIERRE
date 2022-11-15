@@ -45,7 +45,12 @@ public class Guerrier extends Personnage{
     }
     @Override
     public String toString() {
-        return "Guerrier{ Nom= " + nom + ", Points de vie=" + vie+ ", A cheval= " + cheval + '}';
-    }
+        if (armePortee!=null){
+        return "Guerrier{ Nom= " + nom + ", Points de vie=" + vie+ ", A cheval= " + cheval + "\nArme Portee : "+armePortee +  '}';
+    } else {
+        return "Guerrier{ Nom= " + nom + ", Points de vie=" + vie+ ", A cheval= " + cheval+"}";
+        }
+            
+}
 }
 

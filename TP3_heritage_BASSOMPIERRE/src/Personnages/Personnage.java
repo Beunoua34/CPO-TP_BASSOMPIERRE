@@ -47,13 +47,17 @@ public class Personnage {
         if (ajoutee==false) System.out.println("Ce personnage n'a pas cette arme.");
     }
 
+    public ArrayList<Arme> getArmes() {
+        return Armes;
+    }
+
     @Override
     public String toString() {
         if (armePortee!=null){
             return "Personnage{" + "nom=" + nom + ", vie=" + vie + ", Arme portee : "+ armePortee + '}'; 
         }    
         else {
-            return "Personnage{" + "nom=" + nom + ", vie=" + vie + '}';
+            return "Personnage{" + "nom=" + nom + ", vie=" + vie + ", armes: "+ Armes+ '}';
         }
     }
      

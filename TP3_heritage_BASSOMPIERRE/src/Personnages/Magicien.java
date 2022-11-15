@@ -48,7 +48,12 @@ public class Magicien extends Personnage{
 
     @Override
     public String toString() {
-        return "Magicien{ Nom= " + nom + ", Points de vie=" + vie+ ", Confirme= " + confirme + '}';
+        if (armePortee!=null){
+        return "Magicien{ Nom= " + nom + ", Points de vie=" + vie+ ", Confirme= " + confirme + "\nArme portee: "+armePortee+  '}';
     }
+    else  {
+            return "Magicien{ Nom= " + nom + ", Points de vie=" + vie+ ", Confirme= " + confirme +"}";
+        }
+    }         
     
 }

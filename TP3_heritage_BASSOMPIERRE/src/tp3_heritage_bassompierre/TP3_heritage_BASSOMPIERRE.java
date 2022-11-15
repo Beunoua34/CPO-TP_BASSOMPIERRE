@@ -56,6 +56,30 @@ public class TP3_heritage_BASSOMPIERRE {
         for (int i=0;i<TabPerso.size();i++){
             System.out.println(TabPerso.get(i));
         }
+        
+        //TEST DE NOS CLASSES:
+        Guerrier guerrierTest=new Guerrier("Kaaris",34,false);
+        Magicien magicienTest= new Magicien("Booba", 40, true);
+        Epee premiereEpee= new Epee("fourchette",99, 99);
+        Epee deuxiemeEpee= new Epee("couteau",45, 60);
+        Epee troisiemeEpee= new Epee("cuillere",12, 12);
+        Baton premierBaton= new Baton ("Gros Baton", 39,11);
+        Baton deuxiemeBaton= new Baton ("Tres Gros Baton", 67,76);
+        Baton troisiemeBaton= new Baton ("Vraiment Tres Gros Baton", 93,78);
+        
+        guerrierTest.NouvelleArme(premierBaton);
+        guerrierTest.NouvelleArme(premiereEpee);
+        guerrierTest.NouvelleArme(deuxiemeEpee);
+        guerrierTest.setArmePortee("fourchette"); //on ajoute la fouchette à booba
+        guerrierTest.setArmePortee("Epee non existante"); //on teste, et si l'epee n'existe pas, un message d'erreur s'affiche
+        
+        magicienTest.NouvelleArme(deuxiemeBaton);
+        magicienTest.NouvelleArme(troisiemeBaton);
+        magicienTest.NouvelleArme(troisiemeEpee);
+        
+        System.out.println("Nombre d'armes du magicien Booba: "+ magicienTest.getArmes().size());
+        System.out.println(guerrierTest);
+        System.out.println(magicienTest);//Booba n'a pas d'arme portee, donc on en affiche pas
     }
     
 }
