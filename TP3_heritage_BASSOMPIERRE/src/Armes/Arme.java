@@ -21,6 +21,13 @@ public class Arme {
         else{  
             niv_attaque=niv;
     }}
+
+    public String getNom() {
+        return nom;
+    }
+    
+    
+    
     @Override
 public String toString() {
 String chaine_a_retourner;

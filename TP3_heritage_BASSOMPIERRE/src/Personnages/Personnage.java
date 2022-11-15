@@ -30,9 +30,31 @@ public class Personnage {
         }
     }
 
+    public Arme getArmePortee() {
+        return armePortee;
+    }
+
+    public void setArmePortee(String nomArme) {
+        boolean ajoutee = false;
+        for (int i=0;i<Armes.size();i++){ //on parcourt toutes les armes du personnage
+            if (Armes.get(i).getNom().equals(nomArme)){
+                armePortee=Armes.get(i);
+                ajoutee=true;// si l'arme a ete ajoutee, on le note
+                System.out.println("Arme ajoutee");
+        
+            }
+        }
+        if (ajoutee==false) System.out.println("Ce personnage n'a pas cette arme.");
+    }
+
     @Override
     public String toString() {
-        return "Personnage{" + "nom=" + nom + ", vie=" + vie + '}';
+        if (armePortee!=null){
+            return "Personnage{" + "nom=" + nom + ", vie=" + vie + ", Arme portee : "+ armePortee + '}'; 
+        }    
+        else {
+            return "Personnage{" + "nom=" + nom + ", vie=" + vie + '}';
+        }
     }
-    
+     
 }
