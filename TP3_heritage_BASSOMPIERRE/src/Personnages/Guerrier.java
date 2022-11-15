@@ -15,4 +15,28 @@ public class Guerrier extends Personnage{
         super(name,life);  //on fait appel au constructeur de la classe mere
         cheval=aCheval; 
     }
+
+    public Boolean getCheval() {
+        return cheval;
+    }
+
+    public void setCheval(Boolean cheval) {
+        this.cheval = cheval;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getVie() {
+        return vie;
+    }
+
+    public void setVie(int vie) {
+        this.vie = vie;
+    }
 }

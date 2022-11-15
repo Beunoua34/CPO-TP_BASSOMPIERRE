@@ -17,5 +17,29 @@ public class Magicien extends Personnage{
         
         
     }
+
+    public Boolean getConfirme() {
+        return confirme;
+    }
+
+    public void setConfirme(Boolean confirme) {
+        this.confirme = confirme;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getVie() {
+        return vie;
+    }
+
+    public void setVie(int vie) {
+        this.vie = vie;
+    }
     
 }

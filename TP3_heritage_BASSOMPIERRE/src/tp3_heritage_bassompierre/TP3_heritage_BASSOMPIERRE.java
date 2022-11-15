@@ -10,6 +10,8 @@ import Armes.Baton;
 import java.util.ArrayList;
 import Armes.*;
 
+import Personnages.*;
+
 /**
  *
  * @author benba
@@ -36,6 +38,19 @@ public class TP3_heritage_BASSOMPIERRE {
         for (int i=0; i<TabArme.size();i++){  //on parcourt tout le tableau pour afficher chaque element
             System.out.println(TabArme.get(i));
         }
+        
+        //on cree 2 magiciens et 2 guerriers
+        Magicien premierMagicien=new Magicien("Gandalf",65,true);
+        Magicien deuxiemeMagicien= new Magicien("Garcimore",44,false);
+        
+        Guerrier premierGuerrier= new Guerrier ("Conan",78,false);
+        Guerrier deuxiemeGuerrier= new Guerrier ("Lannister",45, true);
+        
+        ArrayList <Personnage> TabPerso= new ArrayList <Personnage>();  //on cree un tableau dynamique de personnages
+        TabPerso.add(premierMagicien);
+        TabPerso.add(deuxiemeMagicien);
+        TabPerso.add(premierGuerrier);
+        TabPerso.add(deuxiemeGuerrier); //et on ajoute chaque guerrier dedans
     }
     
 }
