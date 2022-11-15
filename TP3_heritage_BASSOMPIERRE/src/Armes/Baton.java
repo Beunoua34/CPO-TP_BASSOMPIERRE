@@ -22,9 +22,46 @@ public class Baton extends Arme {
         }
         else{ 
         age=a;
+        
     }
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age<0){
+        this.age=0;//si l age entré est <0 , on le fixe a 0
+    } else if (age>100) {
+            this.age=100;//si l age entré est >100 , on le fixe a 100
+        }
+    else {
+        this.age=age;
+    }
+    }
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNiv_attaque() {
+        return niv_attaque;
+    }
+
+    public void setNiv_attaque(int niv_attaque) {
+        if (niv_attaque<0){
+        this.niv_attaque=0;//si le niveau entré est <0 , on le fixe a 0
+    } else if (niv_attaque>100) {
+            this.niv_attaque=100;//si le niveau entré est >100 , on le fixe a 100
+        }
+    else {
+        this.niv_attaque=niv_attaque;
+    }
+    }
     @Override  //on cree une methode toString speciale pour les batons
     public String toString() {
         return "Baton{ Nom= " + nom + ", Niveau: " + niv_attaque+", age=" + age + '}';

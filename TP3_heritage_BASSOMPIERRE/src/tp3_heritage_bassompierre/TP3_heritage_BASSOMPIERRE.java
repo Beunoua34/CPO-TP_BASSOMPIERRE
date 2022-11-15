@@ -23,7 +23,7 @@ public class TP3_heritage_BASSOMPIERRE {
         //on cree 2 batons et 2 epees
         Epee MonEpee=new Epee("Excalibur",7, 5);
         Epee MonAutreEpee=new Epee("Durandal",4, 7);
-        Baton MonBaton = new Baton ("Chene",4,5);
+        Baton MonBaton = new Baton ("Chene",-4,5); //on teste un niveau negatif, et le code remet bien le niveau 0
         Baton MonAutreBaton = new Baton("Charme",5,6);
         System.out.println(MonBaton); //on en affiche 1 pour tester
         
@@ -32,6 +32,7 @@ public class TP3_heritage_BASSOMPIERRE {
         TabArme.add(MonAutreEpee);
         TabArme.add(MonBaton);
         TabArme.add(MonAutreBaton);
+        MonAutreBaton.setAge(-10); //on peut set un nouvel age, mais pas en dessous de 0 grace au setter
         for (int i=0; i<TabArme.size();i++){  //on parcourt tout le tableau pour afficher chaque element
             System.out.println(TabArme.get(i));
         }
